@@ -6,18 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tea House</title>
   <link rel="stylesheet" href="styles/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-  <style>
-    .font-manrope {
-      font-family: "Manrope", sans-serif;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          },
+          fontFamily: {
+            'manrope': ['Manrope', 'sans-serif'],
+          },
+        },
+      },
     }
-  </style>
+  </script>
+
 </head>
 
-<body>
+<body class="font-manrope">
   <main class="max-w-screen-xl mx-auto px-16 lg:px-28">
     <!-- banner section -->
     <header class="lg:flex pt-10 mb-20">
@@ -50,7 +60,6 @@
         </div>
       </div>
     </header>
-
 
     <!-- featured products section -->
     <section class="py-8 lg:py-24">
